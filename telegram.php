@@ -18,7 +18,7 @@ foreach($arr as $key => $value) {
   $txt .= "<b>".$key."</b> ".$value."%0A";
 };
 
-$sendToTelegram = fopen("https://api.telegram.org/bot{6041162300:AAHxINdrZ74CXpL6o1sd9FiDup-HgG3zukg}/sendMessage?chat_id={-902644634}&parse_mode=html&text={$txt}","r");
+$sendToTelegram = fopen("https://api.telegram.org/bot{$token}/sendMessage?chat_id={$chat_id}&parse_mode=html&text={$txt}","r");
 
 if ($sendToTelegram) {
   header('Location: thank-you.html');
